@@ -3,6 +3,11 @@ python:
   - "3.6"      
   - "3.7"
   - "3.8"  
+ 
+ before_install:
+- echo -e "machine github.com\n  login $GITHUB_TOKEN" > ~/.netrc
+- git lfs pull
+
 install:
   - pip install pytest
   - pip install pytest-cov
