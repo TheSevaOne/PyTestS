@@ -9,4 +9,7 @@ install:
   - pip install coveralls
   - pip install opencv-python
 script:
-  - pytest
+  - pytest --cov=app/
+
+after_success:
+  - coveralls
